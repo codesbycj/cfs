@@ -10,7 +10,7 @@ import Footer from '../components/Footer'
 
 function Home() {
   return (
-    <>
+    <div className="overflow-x-hidden w-full">
       <Navbar />
       <Hero />
       {/* <WhatWeDo /> */}
@@ -20,7 +20,7 @@ function Home() {
       <FAQ />
       <Contact />
       <Footer />
-    </>
+    </div>
   )
 }
 

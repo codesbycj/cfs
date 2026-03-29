@@ -30,7 +30,7 @@ const services = [
 
 const cardStyles = {
   left: {
-    transform: 'translateX(-60%) scale(0.75) rotate(-4deg)',
+    transform: 'translateX(-55%) scale(0.75) rotate(-4deg)',
     opacity: 0.5,
     filter: 'blur(2px)',
     zIndex: 1,
@@ -42,19 +42,19 @@ const cardStyles = {
     zIndex: 10,
   },
   right: {
-    transform: 'translateX(60%) scale(0.75) rotate(4deg)',
+    transform: 'translateX(55%) scale(0.75) rotate(4deg)',
     opacity: 0.5,
     filter: 'blur(2px)',
     zIndex: 1,
   },
   hiddenLeft: {
-    transform: 'translateX(-120%) scale(0.6) rotate(-6deg)',
+    transform: 'translateX(-110%) scale(0.6) rotate(-6deg)',
     opacity: 0,
     filter: 'blur(4px)',
     zIndex: 0,
   },
   hiddenRight: {
-    transform: 'translateX(120%) scale(0.6) rotate(6deg)',
+    transform: 'translateX(110%) scale(0.6) rotate(6deg)',
     opacity: 0,
     filter: 'blur(4px)',
     zIndex: 0,
@@ -99,7 +99,7 @@ function Services() {
             return (
               <div
                 key={service.title}
-                className="absolute w-[300px] sm:w-[400px] lg:w-[520px] h-[340px] sm:h-[380px] lg:h-[460px] rounded-3xl overflow-hidden shadow-xl"
+                className="absolute w-[75vw] max-w-[300px] sm:max-w-[400px] lg:max-w-[520px] h-[340px] sm:h-[380px] lg:h-[460px] rounded-3xl overflow-hidden shadow-xl"
                 style={{
                   ...style,
                   transition: 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)',
@@ -123,13 +123,13 @@ function Services() {
           {/* Nav arrows */}
           <button
             onClick={prev}
-            className="absolute left-1/2 -translate-x-[190px] sm:-translate-x-[230px] lg:-translate-x-[290px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
+            className="absolute left-2 sm:left-4 lg:left-1/2 lg:-translate-x-[290px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={next}
-            className="absolute left-1/2 translate-x-[150px] sm:translate-x-[190px] lg:translate-x-[250px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
+            className="absolute right-2 sm:right-4 lg:right-1/2 lg:-translate-x-[-250px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
           >
             <ChevronRight className="w-5 h-5" />
           </button>
