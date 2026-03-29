@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div className="fixed top-4 sm:top-7 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 lg:px-0">
-      <nav className="flex w-full lg:w-[60%] items-center justify-between px-4 sm:px-6 lg:px-10 py-3 rounded-xl sm:rounded-2xl bg-white/10 backdrop-blur-xl border border-white/15 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+      <nav className="flex w-[90%] lg:w-[60%] items-center justify-between px-4 sm:px-6 lg:px-10 py-3 rounded-xl sm:rounded-2xl bg-black/30 backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
         {/* Logo */}
         <div className="flex items-center gap-2">
           {/* <div className="w-10 h-10 bg-blue-800 rounded-md flex items-center justify-center">
