@@ -132,6 +132,7 @@ function Hero2() {
                     key={service.id}
                     src={service.image}
                     alt={service.title}
+                    loading="lazy"
                     className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ${
                       active === index
                         ? 'opacity-100 scale-100'

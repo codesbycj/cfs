@@ -69,7 +69,7 @@ function WhyChooseUs() {
 
         {/* Comparison card */}
         <div className="rounded-2xl lg:rounded-3xl border border-gray-200 ">
-          <div className="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-2xl lg:rounded-3xl overflow-hidden bg-linear-to-r from-white from-50% to-blue-300 relative p-2">
+          <div className="grid grid-cols-1 lg:grid-cols-2 bg-white rounded-2xl lg:rounded-3xl overflow-hidden bg-linear-to-b lg:bg-linear-to-r from-white from-50% to-blue-300 relative p-2">
             {/* Other Firms */}
             <div className="p-8 lg:p-12">
               <h3 className="text-xl lg:text-2xl font-bold text-[#0a2540] mb-10">Other Firms</h3>

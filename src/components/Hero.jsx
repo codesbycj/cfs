@@ -50,7 +50,7 @@ function Hero() {
             <div className="w-full lg:w-[55%] grid grid-cols-3 grid-rows-2 gap-2 lg:gap-3 h-[280px] sm:h-[360px] lg:h-[520px]">
               {/* Ground Handling - tall left */}
               <div className="group relative row-span-2 col-span-1 overflow-hidden rounded-xl lg:rounded-2xl border border-white/10">
-                <img src={groundImg} alt="Ground Handling" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={groundImg} alt="Ground Handling" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-2 left-2 lg:bottom-4 lg:left-4">
                   <svg className="w-5 h-5 text-white/70 mb-1 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
@@ -62,7 +62,7 @@ function Hero() {
 
               {/* Flight Support - top wide */}
               <div className="group relative col-span-2 overflow-hidden rounded-xl lg:rounded-2xl border border-white/10">
-                <img src={supportImg} alt="Flight Support" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={supportImg} alt="Flight Support" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-2 left-2 lg:bottom-4 lg:left-4">
                   <svg className="w-5 h-5 text-white/70 mb-1 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
@@ -74,7 +74,7 @@ function Hero() {
 
               {/* Aviation Security */}
               <div className="group relative overflow-hidden rounded-xl lg:rounded-2xl border border-white/10">
-                <img src={securityImg} alt="Aviation Security" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={securityImg} alt="Aviation Security" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-2 left-2 lg:bottom-3 lg:left-3">
                   <svg className="w-4 h-4 text-white/70 mb-1 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
@@ -86,7 +86,7 @@ function Hero() {
 
               {/* Government Executive */}
               <div className="group relative overflow-hidden rounded-xl lg:rounded-2xl border border-white/10">
-                <img src={governmentImg} alt="Government Executive" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img src={governmentImg} alt="Government Executive" loading="lazy" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent" />
                 <div className="absolute bottom-2 left-2 lg:bottom-3 lg:left-3">
                   <svg className="w-4 h-4 text-white/70 mb-1 hidden lg:block" fill="currentColor" viewBox="0 0 24 24">
