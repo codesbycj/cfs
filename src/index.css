@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  --font-rubik: "Rubik", sans-serif;
+  --animate-marquee: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+body {
+  font-family: var(--font-rubik);
+}
