@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 function Navbar() {
   return (
     <div className="fixed top-4 sm:top-7 left-0 right-0 z-50 flex justify-center px-3 sm:px-4 lg:px-0">
@@ -11,14 +13,14 @@ function Navbar() {
               <path d="M2 12l10 5 10-5" />
             </svg>
           </div> */}
-          <span className="text-white text-lg sm:text-2xl font-bold">CFS Logistics</span>
+          <Link to="/" className="text-white text-lg sm:text-2xl font-bold">CFS Logistics</Link>
         </div>
 
         {/* Nav Links */}
         <ul className="hidden md:flex items-center gap-8 text-white/90 text-sm font-medium">
           <li><a href="#" className="hover:text-blue-300 transition">About Us</a></li>
           <li><a href="#" className="hover:text-blue-300 transition">Services</a></li>
-          <li><a href="#" className="hover:text-blue-300 transition">Contact Us</a></li>
+          <li><Link to="/contact" className="hover:text-blue-300 transition">Contact Us</Link></li>
         </ul>
 
         {/* CTA Button */}
