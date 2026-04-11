@@ -1,4 +1,5 @@
 import { ArrowUpRight, Mail, Phone, MapPin } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
   return (
@@ -30,10 +31,9 @@ function Footer() {
           <div className="lg:col-span-2">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Menu</h4>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Services</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">About Us</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">How It Works</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Contact</a></li>
+              <li><Link to="/services" className="text-gray-500 hover:text-[#0a2540] transition">Services</Link></li>
+              <li><Link to="/about" className="text-gray-500 hover:text-[#0a2540] transition">About Us</Link></li>
+              <li><Link to="/contact" className="text-gray-500 hover:text-[#0a2540] transition">Contact</Link></li>
             </ul>
           </div>
 
@@ -41,10 +41,11 @@ function Footer() {
           <div className="lg:col-span-3">
             <h4 className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">Services</h4>
             <ul className="space-y-4 text-sm">
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Ground Handling</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Flight Support</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Freight Forwarding</a></li>
-              <li><a href="#" className="text-gray-500 hover:text-[#0a2540] transition">Aviation Security</a></li>
+              <li><Link to="/services/vip-aircraft-charter" className="text-gray-500 hover:text-[#0a2540] transition">VIP Aircraft Charter</Link></li>
+              <li><Link to="/services/air-ambulance" className="text-gray-500 hover:text-[#0a2540] transition">Air Ambulance</Link></li>
+              <li><Link to="/services/flight-support" className="text-gray-500 hover:text-[#0a2540] transition">Flight Support</Link></li>
+              <li><Link to="/services/cargo-services" className="text-gray-500 hover:text-[#0a2540] transition">Cargo Services</Link></li>
+              <li><Link to="/services/aircraft-fueling" className="text-gray-500 hover:text-[#0a2540] transition">Aircraft Fueling</Link></li>
             </ul>
           </div>
 

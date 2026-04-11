@@ -15,8 +15,8 @@ function Navbar() {
 
           {/* Nav Links */}
           <ul className="hidden md:flex items-center gap-8 text-white/90 text-sm font-medium">
-            <li><a href="#" className="hover:text-blue-300 transition">About Us</a></li>
-            <li><a href="#" className="hover:text-blue-300 transition">Services</a></li>
+            <li><Link to="/about" className="hover:text-blue-300 transition">About Us</Link></li>
+            <li><Link to="/services" className="hover:text-blue-300 transition">Services</Link></li>
             <li><Link to="/contact" className="hover:text-blue-300 transition">Contact Us</Link></li>
           </ul>
 
@@ -49,14 +49,14 @@ function Navbar() {
           <div className="border-t border-white/10 px-6 pb-6 pt-4">
             <ul className="flex flex-col gap-1 text-white/90 text-base font-medium">
               <li>
-                <a href="#" className="block py-3 px-3 rounded-lg hover:bg-white/10 hover:text-blue-300 transition">
+                <Link to="/about" onClick={() => setMenuOpen(false)} className="block py-3 px-3 rounded-lg hover:bg-white/10 hover:text-blue-300 transition">
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="block py-3 px-3 rounded-lg hover:bg-white/10 hover:text-blue-300 transition">
+                <Link to="/services" onClick={() => setMenuOpen(false)} className="block py-3 px-3 rounded-lg hover:bg-white/10 hover:text-blue-300 transition">
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <Link to="/contact" onClick={() => setMenuOpen(false)} className="block py-3 px-3 rounded-lg hover:bg-white/10 hover:text-blue-300 transition">

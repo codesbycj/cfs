@@ -36,8 +36,8 @@ function FAQ() {
       <div className="max-w-3xl mx-auto px-5 lg:px-0">
         <div className="text-center mb-12 lg:mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <span className="w-2 h-2 rounded-full bg-blue-800" />
-            <span className="text-sm font-semibold text-blue-800">FAQ</span>
+            <span className="w-2 h-2 rounded-full bg-blue-600" />
+            <span className="text-sm font-semibold text-gray-700">FAQ</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0a2540] leading-tight">
             Answers to your most<br />common questions
@@ -54,7 +54,7 @@ function FAQ() {
                 <span className="text-base sm:text-lg font-medium text-[#0a2540] pr-8">
                   {faq.question}
                 </span>
-                <span className={`w-8 h-8 rounded-full bg-blue-800 text-white flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
+                <span className={`w-8 h-8 rounded-full bg-gray-300 text-black flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}>
                   <ChevronDown className="w-4 h-4" />
                 </span>
               </button>

@@ -123,13 +123,15 @@ function Services() {
           {/* Nav arrows */}
           <button
             onClick={prev}
-            className="absolute left-2 sm:left-4 lg:left-1/2 lg:-translate-x-[290px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
+            aria-label="Previous service"
+            className="absolute left-2 sm:left-4 lg:left-8 top-1/2 -translate-y-1/2 w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-gray-200 hover:bg-gray-300 text-[#0a2540] flex items-center justify-center shadow-md transition cursor-pointer z-20"
           >
             <ChevronLeft className="w-5 h-5" />
           </button>
           <button
             onClick={next}
-            className="absolute right-2 sm:right-4 lg:right-1/2 lg:-translate-x-[-250px] top-1/2 -translate-y-1/2 w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-blue-800 text-white flex items-center justify-center shadow-lg hover:bg-blue-900 transition cursor-pointer z-20"
+            aria-label="Next service"
+            className="absolute right-2 sm:right-4 lg:right-8 top-1/2 -translate-y-1/2 w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-gray-200 hover:bg-gray-300 text-[#0a2540] flex items-center justify-center shadow-md transition cursor-pointer z-20"
           >
             <ChevronRight className="w-5 h-5" />
           </button>

@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import { Phone, MapPin, MessageCircle, Send, Mail, Clock, ArrowRight } from 'lucide-react'
+import { Phone, MapPin, MessageCircle, Send, Mail, Clock } from 'lucide-react'
+import contactHeroImg from '../assets/ground.jpg'
 
 const services = [
   'Ground Handling',
@@ -22,104 +23,88 @@ function Contact() {
   }
 
   return (
-    <section className="relative overflow-hidden">
-      {/* Hero Header */}
-      <div className="relative bg-linear-to-br from-[#0a2540] via-blue-900 to-[#0a2540] pt-32 pb-32 sm:pb-40 lg:pb-48">
-        {/* Background decorations */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-          <div className="absolute -bottom-20 -left-20 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-150 bg-blue-600/5 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden bg-gray-50">
+      {/* Hero: split copy + image */}
+      <div className="relative pt-32 sm:pt-36 lg:pt-40 pb-20 sm:pb-24 lg:pb-32 mb-16 sm:mb-20 lg:mb-28">
+        {/* Right image - full height of hero, anchored to right edge */}
+        <div className="lg:absolute lg:top-0 lg:right-0 lg:bottom-0 lg:w-[45%] order-first lg:order-last mb-10 lg:mb-0 mx-5 lg:mx-0">
+          <div className="relative h-80 lg:h-full w-full overflow-hidden">
+            <img
+              src={contactHeroImg}
+              alt="CFS Logistics operations"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-linear-to-t from-[#0a2540]/30 via-transparent to-transparent" />
+          </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-5 lg:px-16 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-4 py-1.5 mb-6">
-            <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-            <span className="text-sm font-medium text-blue-200">We'd love to hear from you</span>
+        {/* Left content */}
+        <div className="relative max-w-8xl mx-auto w-full px-5 sm:px-8 lg:px-12">
+          <div className="lg:max-w-[55%] lg:pr-10">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#0a2540] leading-[1.05] tracking-tight mb-5 max-w-xl">
+              Get in touch with us
+            </h1>
+            <p className="text-gray-500 text-sm sm:text-base leading-relaxed max-w-md mb-10 lg:mb-12">
+              Our friendly team is here to help. Reach out by phone, email or through our
+              contact form, we'll get back to you promptly and make your next flight mission
+              smooth from start to finish.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl">
+              {/* Phone */}
+              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-[0_4px_24px_rgba(10,37,64,0.06)]">
+                <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                  <Phone className="w-4 h-4 text-blue-800" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-sm font-bold text-[#0a2540] mb-1">Phone</h3>
+                <a href="tel:+2348000000000" className="text-sm text-gray-500 hover:text-[#0a2540] transition">
+                  +234 800 000 0000
+                </a>
+              </div>
+
+              {/* Email */}
+              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-[0_4px_24px_rgba(10,37,64,0.06)]">
+                <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                  <Mail className="w-4 h-4 text-blue-800" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-sm font-bold text-[#0a2540] mb-1">Email</h3>
+                <a
+                  href="mailto:info@cfslogistics.com"
+                  className="text-sm text-gray-500 hover:text-[#0a2540] transition break-all"
+                >
+                  info@cfslogistics.com
+                </a>
+              </div>
+
+              {/* Address */}
+              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-[0_4px_24px_rgba(10,37,64,0.06)]">
+                <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                  <MapPin className="w-4 h-4 text-blue-800" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-sm font-bold text-[#0a2540] mb-1">Address</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  Murtala Muhammed Airport, Lagos, Nigeria
+                </p>
+              </div>
+
+              {/* Opening hours */}
+              <div className="bg-white rounded-2xl p-5 sm:p-6 border border-gray-100 shadow-[0_4px_24px_rgba(10,37,64,0.06)]">
+                <div className="w-10 h-10 rounded-full bg-blue-50 border border-blue-100 flex items-center justify-center mb-4">
+                  <Clock className="w-4 h-4 text-blue-800" strokeWidth={1.75} />
+                </div>
+                <h3 className="text-sm font-bold text-[#0a2540] mb-1">Opening hours</h3>
+                <p className="text-sm text-gray-500 leading-relaxed">
+                  24/7/365 operations desk
+                </p>
+              </div>
+            </div>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-5">
-            Contact our team
-          </h2>
-          <p className="text-blue-200/80 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-            Got any questions about our services or scaling your logistics?
-            We're here to help. Chat to our friendly team 24/7 and get onboard
-            in less than 5 minutes.
-          </p>
         </div>
       </div>
 
-      {/* Content - overlaps the hero */}
-      <div className="relative -mt-24 sm:-mt-32 lg:-mt-36 pb-16 sm:pb-20 lg:pb-28">
+      {/* Form section wrapper */}
+      <div className="pb-16 sm:pb-20 lg:pb-28">
         <div className="max-w-7xl mx-auto px-5 lg:px-16">
-          {/* Contact Info Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-5 mb-12 lg:mb-16">
-            {/* Chat Card */}
-            <div className="group bg-white rounded-2xl p-6 sm:p-7 shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-all duration-300 border border-gray-100">
-              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <MessageCircle className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#0a2540] mb-1.5">Chat with us</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Speak to our friendly team via live chat.
-              </p>
-              <div className="space-y-2.5">
-                <a
-                  href="#"
-                  className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-600 transition group/link"
-                >
-                  <MessageCircle className="w-4 h-4" />
-                  Start a live chat
-                  <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200" />
-                </a>
-                <a
-                  href="mailto:info@cfslogistics.com"
-                  className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-600 transition group/link"
-                >
-                  <Mail className="w-4 h-4" />
-                  Shoot us an email
-                  <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200" />
-                </a>
-              </div>
-            </div>
-
-            {/* Call Card */}
-            <div className="group bg-white rounded-2xl p-6 sm:p-7 shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-all duration-300 border border-gray-100">
-              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Phone className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#0a2540] mb-1.5">Call us</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Call our team Mon-Fri from 8am to 5pm.
-              </p>
-              <a
-                href="tel:+2348000000000"
-                className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-600 transition group/link"
-              >
-                <Phone className="w-4 h-4" />
-                +234 800 000 0000
-                <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200" />
-              </a>
-            </div>
-
-            {/* Visit Card */}
-            <div className="group bg-white rounded-2xl p-6 sm:p-7 shadow-[0_4px_24px_rgba(0,0,0,0.08)] hover:shadow-[0_8px_40px_rgba(0,0,0,0.12)] transition-all duration-300 border border-gray-100">
-              <div className="w-12 h-12 rounded-xl bg-linear-to-br from-blue-600 to-blue-800 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <MapPin className="w-5 h-5 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#0a2540] mb-1.5">Visit us</h3>
-              <p className="text-sm text-gray-500 mb-4">
-                Chat to us in person at our Lagos HQ.
-              </p>
-              <a
-                href="#"
-                className="flex items-center gap-2 text-sm font-medium text-blue-800 hover:text-blue-600 transition group/link"
-              >
-                <MapPin className="w-4 h-4" />
-                Murtala Muhammed Airport, Lagos
-                <ArrowRight className="w-3.5 h-3.5 opacity-0 -translate-x-2 group-hover/link:opacity-100 group-hover/link:translate-x-0 transition-all duration-200" />
-              </a>
-            </div>
-          </div>
 
           {/* Form Section */}
           <div className="bg-white rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.08)] border border-gray-100 overflow-hidden">
