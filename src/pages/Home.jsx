@@ -17,7 +17,7 @@ function Home() {
       {/* <WhatWeDo /> */}
       <WhyChooseUs />
       <Services />
-      <DrivenByPurpose />
+      {/* <DrivenByPurpose /> */}
       <Globe />
       <FAQ />
       <ContactHome />
